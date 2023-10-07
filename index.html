@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <title>Learn-HTML</title>
 </head>
 <body>
     <div id="main">
         <div id="header">
+            <div id="logo">
+                <img id="img-logo" src="css/picture/covn.jpg" alt="">
+            </div>
+            <div id="ti-menu"><i class="ti-menu"></i></div>
             <ul id="nav">
                 <li class="header-li"><a href="">Home</a>
                 <li class="header-li" style="background-color: rgb(26, 189, 40);"><a href="#learn-html" > HTML  </a>
@@ -20,8 +25,21 @@
             <img class="co" src="css/picture/covn.jpg" alt="">
             <img class="co" src="css/picture/la-co-vuong-quoc-anh.jpg" alt="">
         </div>
-     </div>
+     
+    
+    
+    
+    </div>
 
+     <div id="ti-menu1"><i class="ti-angle-double-right"></i></div>
+     <div id="ti-menu2"><i class="ti-angle-double-left"></i></div>
+     <div>
+        
+    
+    
+    
+    
+    </div>
      <div id="container">
         <div id="left">
             <h2 style="text-align: center; padding: 7px 0px;">HTML</h2>
@@ -110,6 +128,23 @@
             </div>
         </div>
      </div>
+
+
+
+
+
+
+
+
+
+     <div id="menu-header">
+        <ul>
+            <li><a href="">Trang Chủ</a></li>
+            <li><a href="">HTML</a></li>
+            <li><a href="">CSS</a></li>
+            <li><a href="">Thuật Toán</a></li>
+        </ul>
+     </div>
     </div>
 
     <script>
@@ -156,4 +191,76 @@ for (let i = 0; i < elements.length; i++) {
 }
 
     </script>
+
+
+<script>
+    document.getElementById("ti-menu1").addEventListener("click", function() {
+var x = document.getElementById("left");
+var y = document.getElementById("right");
+var z = document.getElementById("ti-menu2");
+var r = document.getElementById("ti-menu1");
+    x.style.display = "block";
+    z.style.display = "block";
+    r.style.display = "none";
+
+});
+    </script>
+
+<script>
+    document.getElementById("ti-menu2").addEventListener("click", function() {
+var x = document.getElementById("left");
+var y = document.getElementById("right");
+var z = document.getElementById("ti-menu2");
+var r = document.getElementById("ti-menu1");
+    x.style.display = "none";
+    z.style.display = "none";
+    r.style.display = "block";
+
+});
+    </script>
+
+    <script>
+        
+
+        function xuLyThayDoiKichThuocManHinh() {
+             const witd = window.innerWidth;
+             var x = document.getElementById("left");
+             var y = document.getElementById("right");
+             var z = document.getElementById("ti-menu2");
+            var r = document.getElementById("ti-menu1");
+             console.log(witd);
+              if(witd >= 800){
+                x.style.display = "block";
+                z.style.display = "none";
+              }
+              else{
+                x.style.display="none";
+                z.style.display = "none";
+                r.style.display = "block";
+              }
+            }
+// Thêm sự kiện "resize" để theo dõi thay đổi kích thước màn hình
+        window.addEventListener("resize", xuLyThayDoiKichThuocManHinh);
+    </script>
+
+
+<script>
+    document.getElementById("ti-menu").addEventListener("click", function() {
+    var x = document.getElementById("menu-header");
+   if( x.style.display == "block"){
+    x.style.display = "none";
+   }else{
+    x.style.display = "block";
+   }
+});
+    </script>
+
+<script>
+    document.getElementById("container").addEventListener("click", function() {
+    var x = document.getElementById("menu-header");
+    x.style.display = "none";
+});
+    </script>
+    
+
 </body>
