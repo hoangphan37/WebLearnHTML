@@ -47,6 +47,9 @@ html {
     margin-right: 5px;
 
 }
+.co:hover{
+    border-radius: 5px;
+}
 #nav>li{
     display: inline-block;
     position: relative;
